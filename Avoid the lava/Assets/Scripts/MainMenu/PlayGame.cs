@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlazGame : MonoBehaviour
+public class PlayGame : MonoBehaviour
 {
-    public AudioSource effect;
-    public void PlayGame()
+   // public AudioSource effect;
+    public void Play()
     {
-        effect.Play();
+       // effect.Play();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

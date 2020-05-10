@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971c4e23e45a25c4fad70f7c3c2abdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 15
   obstacle: {fileID: 5836243743807863936}
 --- !u!54 &5836243743807863938
 Rigidbody:

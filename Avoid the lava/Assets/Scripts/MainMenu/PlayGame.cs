@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayGame : MonoBehaviour
 {
-   // public AudioSource effect;
-    public void Play()
+    public AudioSource effect;
+    public void BeginGame()
     {
-       // effect.Play();
+        effect.Play();
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level");
     }
 }

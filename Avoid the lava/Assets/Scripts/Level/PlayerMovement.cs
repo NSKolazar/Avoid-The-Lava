@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed;
-        rb.MovePosition(rb.position + Vector3.right * x);
+        rb.MovePosition(rb.position + (Vector3.right * x));
     }
 
     

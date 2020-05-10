@@ -1,12 +1,11 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 15f;
+    [SerializeField]public float speed = 15f;
 
-    public Rigidbody rb;
-
+    [SerializeField] private Rigidbody rb;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();    
@@ -14,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed;
-
         rb.MovePosition(rb.position + Vector3.right * x);
     }
+
+    
 }

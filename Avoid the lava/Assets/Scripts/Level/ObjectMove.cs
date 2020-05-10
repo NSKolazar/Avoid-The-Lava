@@ -17,10 +17,9 @@ public class ObjectMove : MonoBehaviour
     {
         if (collisionInfo.collider.CompareTag("End"))
         {
-            Invoke("Destroy", 0.5f);
+            Invoke("Destroy", 0.1f);
         }
     }
-
     void Destroy()
     {
         obstacle.SetActive(false);

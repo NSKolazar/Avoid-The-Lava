@@ -4,6 +4,13 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     bool gameEnded = false;
+
+    public GameObject CompleteLevelUI;
+
+    public void CompleteLevel()
+    {
+        CompleteLevelUI.SetActive(true);
+    }
     public void EndGame()
     {
         if (gameEnded == false)

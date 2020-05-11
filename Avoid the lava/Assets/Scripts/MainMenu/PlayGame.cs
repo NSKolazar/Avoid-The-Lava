@@ -7,7 +7,11 @@ public class PlayGame : MonoBehaviour
     public void BeginGame()
     {
         effect.Play();
+        Invoke("Begin",1f);
+    }
 
+    void Begin()
+    {
         SceneManager.LoadScene("Level");
     }
 }

@@ -2,10 +2,10 @@
 
 public class QuitGame : MonoBehaviour
 {
-    //[SerializeField] AudioSource effect;
+    [SerializeField] AudioSource effect;
     public void Quit()
     {
-        //effect.Play();
+        effect.Play();
         Debug.Log("Quit");
         Application.Quit();
     }

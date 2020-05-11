@@ -4,6 +4,7 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] public PlayerMovement movement;
     [SerializeField] public GameObject player;
+    [SerializeField] public AudioSource hit;
 
     void OnCollisionEnter(Collision collisionInfo)
     {
@@ -14,6 +15,7 @@ public class PlayerCollision : MonoBehaviour
             FindObjectOfType<Timer>().collision = true;
             FindObjectOfType<Timer>().timer.text = "Dead!";
             FindObjectOfType<Manager>().EndGame();
+            hit.Play();
         }
         if (collisionInfo.collider.CompareTag("End"))
         {

@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     public Text timer;
     public float timeLeft = 8;
     public bool collision = false;
+    [SerializeField] public AudioSource success;
 
     private void Start()
     {
@@ -26,6 +27,9 @@ public class Timer : MonoBehaviour
         if (timeLeft == 0 && collision == false)
         {
             timer.text = "Phew! You survived.";
+            success.Play();
+            yield return new WaitForSecondsRealtime(1);
+            FindObjectOfType<Manager>().CompleteLevel();
         }
 
                 

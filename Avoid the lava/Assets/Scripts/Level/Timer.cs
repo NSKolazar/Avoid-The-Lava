@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public static Text timer;
-    public static float timeLeft = 8;
-    public static bool collision = false;
+    public Text timer;
+    public float timeLeft = 8;
+    public bool collision = false;
 
     private void Start()
     {

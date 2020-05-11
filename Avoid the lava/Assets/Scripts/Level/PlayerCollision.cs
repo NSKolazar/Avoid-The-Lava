@@ -10,9 +10,10 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.CompareTag("Obstacle"))
         {
             movement.enabled = false;
-            Timer.timeLeft = 0;
-            Timer.collision = true;
-            Timer.timer.text = "Dead!";
+            FindObjectOfType<Timer>().timeLeft = 0;
+            FindObjectOfType<Timer>().collision = true;
+            FindObjectOfType<Timer>().timer.text = "Dead!";
+            FindObjectOfType<Manager>().EndGame();
         }
         if (collisionInfo.collider.CompareTag("End"))
         {
